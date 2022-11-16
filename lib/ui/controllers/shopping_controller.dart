@@ -21,6 +21,7 @@ class ShoppingController extends GetxController {
     int newTotal = 0;
     // TODO
     // calcular el valor total de los elementos en el carro de compras
+    
     total.value = newTotal;
   }
 
