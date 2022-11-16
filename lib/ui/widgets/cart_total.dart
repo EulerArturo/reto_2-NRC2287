@@ -10,9 +10,11 @@ class CartTotal extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       child: Center(
-        //TODO
+        //todo resuelto
         // aquí debemos observar la variable total del shoppingController
-        child: Text('Total: xx usd',
+        // ${shoppingController.total} agragada por arturo sergio y joan
+
+        child: Text('${shoppingController.total}',
             style: const TextStyle(
                 fontSize: 25.0,
                 color: Colors.blueGrey,
