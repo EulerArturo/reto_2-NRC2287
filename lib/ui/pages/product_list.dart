@@ -82,7 +82,7 @@ class _ProductListState extends State<ProductList> {
                   // pasandole el product.id
                   // TODO cambios hechos arturo, joan, sergio
                   shoppingController.agregarProducto(product.id);
-                  product.quantity += 1;
+                  
                 },
                 icon: const Icon(Icons.arrow_upward)),
             IconButton(
@@ -93,7 +93,7 @@ class _ProductListState extends State<ProductList> {
                   // pasandole el product.id
                   // TODO cambios hechos arturo, joan, sergio
                   shoppingController.quitarProducto(product.id);
-                  product.quantity = -1;
+                  
                 },
                 icon: const Icon(Icons.arrow_downward))
           ],

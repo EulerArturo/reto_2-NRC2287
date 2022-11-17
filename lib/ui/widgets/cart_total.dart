@@ -14,7 +14,7 @@ class CartTotal extends StatelessWidget {
         // aquí debemos observar la variable total del shoppingController
         // ${shoppingController.total} agragada por arturo sergio y joan
 
-        child: Text('${shoppingController.total}',
+        child: Text('Total ${shoppingController.total} USD',
             style: const TextStyle(
                 fontSize: 25.0,
                 color: Colors.blueGrey,
