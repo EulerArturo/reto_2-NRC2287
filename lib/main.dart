@@ -12,7 +12,7 @@ void main() {
       showColors: true,
     ),
   );
-  // TODO cambio realizado por arturo y anyela
+  // Todo cambio realizado por arturo y anyela
   // agregar el ShoppingController al DI de Get
   Get.put(ShoppingController());
 

@@ -22,18 +22,11 @@ class ShoppingController extends GetxController {
     //newTotal = newTotal + price*quantity // Acumular el total del costo de lo que hay en el carrito
     // TODO
     // calcular el valor total de los elementos en el carro de compras
-    // for (int i = 0; i < entries.length; i++) {
-    //   Product producto = entries.value[i];
-    //   newTotal = producto.quantity * producto.price;
-    //
-    // }
-
+    
     for (var element in entries) {
       newTotal = newTotal + element.quantity * element.price;
     }
-
     total.value = newTotal;
-
   }
 
   agregarProducto(id) {

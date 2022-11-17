@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
+import '../pages/home_page.dart';
 import '../../domain/product.dart';
 import '../Widgets/banner.dart';
 import '../controllers/shopping_controller.dart';
@@ -19,11 +19,15 @@ class _ProductListState extends State<ProductList> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
+        
         child: Column(
           children: [
+            
             Stack(
               children: [const CustomBanner(50), customAppBar()],
             ),
+
+            
             // TODO resuelto
             // aquí debemos rodear el widget Expanded en un Obx para
             // observar los cambios en la lista de entries del shoppingController
@@ -37,7 +41,9 @@ class _ProductListState extends State<ProductList> {
                       return _row(shoppingController.entries[index], index);
                     }),
               ),
-            )
+            ),
+            logo(),
+          
           ],
         ),
       ),
@@ -64,6 +70,7 @@ class _ProductListState extends State<ProductList> {
 
   Widget _row(Product product, int index) {
     return _card(product);
+
   }
 
   Widget _card(Product product) {
@@ -113,4 +120,22 @@ class _ProductListState extends State<ProductList> {
       ]),
     );
   }
+
+  Widget logo() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Image.network(
+              'https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Logotipo_de_la_Universidad_del_Norte.svg/2560px-Logotipo_de_la_Universidad_del_Norte.svg.png',
+              width: 180,
+              height: 45,
+              fit: BoxFit.fill),
+        )
+      ],
+    );
+  }  
+
+
 }
