@@ -21,9 +21,7 @@ class ShoppingController extends GetxController {
     int newTotal = 0;
     // TODO
     // calcular el valor total de los elementos en el carro de compras
-
-    // var newEntries = entries.map((element) => element);
-    // print(newEntries);
+    
 
     total.value = newTotal;
   }
@@ -40,6 +38,7 @@ class ShoppingController extends GetxController {
     // después obtener el index de ese elemento, revisar el método indexOf de la lista
     // después hacer el incremento en la cantidad
     // finalmente actualizar entries usando el indice y el elemento actualizado
+    
     calcularTotal();
   }
 
@@ -48,6 +47,7 @@ class ShoppingController extends GetxController {
     // TODO
     // similar a agregarProducto
     // validar cuando la cantidad es igual a cero
+
     calcularTotal();
   }
 }
