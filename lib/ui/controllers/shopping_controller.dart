@@ -30,13 +30,18 @@ class ShoppingController extends GetxController {
 
   agregarProducto(id) {
     logInfo('agregarProducto $id');
+    Product producto = entries.firstWhere((element) => id == element.id);
+    int posicion = entries.indexOf(producto);
+    producto.quantity = producto.quantity + 1;
+    entries[posicion] = producto;
+
     // TODO
     // Encontrar el elemento usando el id, revisar el método firstWhere de la lista
     // después obtener el index de ese elemento, revisar el método indexOf de la lista
     // después hacer el incremento en la cantidad
     // finalmente actualizar entries usando el indice y el elemento actualizado
     calcularTotal();
-  } 
+  }
 
   quitarProducto(id) {
     logInfo('quitarProducto $id');
